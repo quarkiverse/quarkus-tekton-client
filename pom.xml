@@ -24,7 +24,6 @@
         <quarkus.version>1.11.0.Final</quarkus.version>
         <tekton-client.version>5.0.0</tekton-client.version>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
-        <jandex-plugin.version>1.0.8</jandex-plugin.version>
     </properties>
 
     <modules>
@@ -45,11 +44,6 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- <plugin>
-                    <groupId>org.jboss.jandex</groupId>
-                    <artifactId>jandex-maven-plugin</artifactId>
-                    <version>${jandex-plugin.version}</version>
-                </plugin> -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
