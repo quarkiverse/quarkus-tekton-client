@@ -1,4 +1,4 @@
-package io.quarkiverse.tekton.client;
+package io.quarkiverse.tektonclient;
 
 import javax.enterprise.inject.Produces;
 import javax.inject.Singleton;

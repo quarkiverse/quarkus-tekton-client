@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.quarkiverse.tekton.client</groupId>
-        <artifactId>quarkus-tekton-client-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>io.quarkiverse.tektonclient</groupId>
+        <artifactId>quarkiverse-tekton-client-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>quarkus-tekton-client</artifactId>
-    <name>Quarkus - Tekton Client - Runtime</name>
+    <artifactId>quarkiverse-tekton-client</artifactId>
+    <name>Quarkiverse - Tekton Client - Runtime</name>
 
     <dependencies>
         <dependency>
@@ -23,7 +23,6 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-kubernetes-client</artifactId>
-            <!-- <version>${quarkus.version}</version> -->
         </dependency>
         <dependency>
             <groupId>io.fabric8</groupId>
@@ -34,7 +33,7 @@
 
     <build>
         <plugins>
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.jboss.jandex</groupId>
                 <artifactId>jandex-maven-plugin</artifactId>
                 <executions>
@@ -45,7 +44,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-bootstrap-maven-plugin</artifactId>
