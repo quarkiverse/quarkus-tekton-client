@@ -13,7 +13,7 @@ complexity related to handling dependencies in case of **native builds**.
 ```xml
 <dependency>
     <groupId>io.quarkiverse.tektonclient</groupId>
-    <artifactId>quarkiverse-tekton-client</artifactId>
+    <artifactId>quarkus-tekton-client</artifactId>
     <version>LATEST</version>
 </dependency>
 ```

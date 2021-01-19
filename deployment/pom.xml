@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.quarkiverse.tektonclient</groupId>
-        <artifactId>quarkiverse-tekton-client-parent</artifactId>
+        <artifactId>quarkus-tekton-client-parent</artifactId>
         <version>0.1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>quarkiverse-tekton-client-deployment</artifactId>
+    <artifactId>quarkus-tekton-client-deployment</artifactId>
     <name>Quarkiverse - Tekton Client - Deployment</name>
 
     <dependencies>
@@ -26,7 +26,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkiverse.tektonclient</groupId>
-            <artifactId>quarkiverse-tekton-client</artifactId>
+            <artifactId>quarkus-tekton-client</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
