@@ -3,6 +3,7 @@ package io.quarkiverse.tektonclient.deployment;
 import org.jboss.jandex.IndexView;
 
 import io.quarkiverse.tektonclient.TektonClientProducer;
+import io.quarkiverse.tektonclient.deployment.nativeimage.IgnorePackagePredicate;
 import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
 import io.quarkus.deployment.annotations.BuildProducer;
 import io.quarkus.deployment.annotations.BuildStep;
@@ -10,18 +11,19 @@ import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 import io.quarkus.deployment.builditem.IndexDependencyBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.ReflectiveClassBuildItem;
+import io.quarkus.deployment.builditem.nativeimage.ReflectiveHierarchyIgnoreWarningBuildItem;
 
 class TektonClientProcessor {
 
     private static final String FEATURE = "quarkiverse-tekton-client";
 
     @BuildStep
-    FeatureBuildItem feature() {
+    public FeatureBuildItem feature() {
         return new FeatureBuildItem(FEATURE);
     }
 
     @BuildStep
-    void addDependencies(BuildProducer<IndexDependencyBuildItem> indexDependency) {
+    public void addDependencies(BuildProducer<IndexDependencyBuildItem> indexDependency) {
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-client"));
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-model-v1alpha1"));
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-model-v1beta1"));
@@ -44,5 +46,11 @@ class TektonClientProcessor {
     @BuildStep
     public void registerBeans(BuildProducer<AdditionalBeanBuildItem> additionalBeanBuildItemProducer) {
         additionalBeanBuildItemProducer.produce(AdditionalBeanBuildItem.unremovableOf(TektonClientProducer.class));
+    }
+
+    @BuildStep
+    public void ignoreWarnings(BuildProducer<ReflectiveHierarchyIgnoreWarningBuildItem> ignoreWarningProducer) {
+        ignoreWarningProducer.produce(new ReflectiveHierarchyIgnoreWarningBuildItem(new IgnorePackagePredicate()));
+
     }
 }
