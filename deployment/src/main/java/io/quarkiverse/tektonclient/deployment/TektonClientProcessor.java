@@ -27,6 +27,7 @@ class TektonClientProcessor {
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-client"));
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-model-v1alpha1"));
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-model-v1beta1"));
+        indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "tekton-model-triggers"));
         indexDependency.produce(new IndexDependencyBuildItem("io.fabric8", "knative-model"));
     }
 
