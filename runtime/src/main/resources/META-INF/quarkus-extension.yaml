@@ -1,0 +1,8 @@
+name: Tekton Client
+description: Inject the Tekton client without worrying about the complexity related to handling dependencies.
+metadata:
+  keywords:
+    - tekton
+  categories:
+    - "miscellaneous"
+  status: "preview"
