@@ -22,7 +22,8 @@ complexity related to handling dependencies in case of **native builds**.
 
 ```java
 import java.util.List;
-import javax.enterprise.context.ApplicationScoped;
+
+import jakarta.enterprise.context.ApplicationScoped;
 import io.fabric8.tekton.client.TektonClient;
 import io.fabric8.tekton.pipeline.v1beta1.Pipeline;
 
