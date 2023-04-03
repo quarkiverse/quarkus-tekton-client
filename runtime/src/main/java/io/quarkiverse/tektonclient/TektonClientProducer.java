@@ -1,7 +1,7 @@
 package io.quarkiverse.tektonclient;
 
-import javax.enterprise.inject.Produces;
-import javax.inject.Singleton;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Singleton;
 
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.tekton.client.DefaultTektonClient;
