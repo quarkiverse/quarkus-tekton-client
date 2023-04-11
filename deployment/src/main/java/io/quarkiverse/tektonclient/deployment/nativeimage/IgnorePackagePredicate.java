@@ -8,8 +8,8 @@ import org.jboss.jandex.DotName;
 
 public class IgnorePackagePredicate implements Predicate<DotName> {
 
-    private static final List<String> IGNORED_PACKAGES = Arrays.asList("javax.crypto.", "javax.net.",
-            "javax.security.auth.");
+    private static final List<String> IGNORED_PACKAGES = Arrays.asList("jakarta.crypto.", "jakarta.net.",
+            "jakarta.security.auth.");
 
     @Override
     public boolean test(DotName dotName) {
