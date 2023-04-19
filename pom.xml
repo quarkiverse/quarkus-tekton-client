@@ -10,7 +10,7 @@
 
     <groupId>io.quarkiverse.tektonclient</groupId>
     <artifactId>quarkus-tekton-client-parent</artifactId>
-    <version>1.0.0</version>
+    <version>999-SNAPSHOT</version>
     <name>Quarkiverse - Tekton Client - Parent</name>
 
     <packaging>pom</packaging>
@@ -51,8 +51,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-  <scm>
-    <tag>1.0.0</tag>
-  </scm>
 </project>
