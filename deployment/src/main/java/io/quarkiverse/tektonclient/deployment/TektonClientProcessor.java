@@ -42,7 +42,7 @@ class TektonClientProcessor {
                 .filter(classInfo -> classInfo.name().toString().startsWith("io.fabric8.tekton.pipeline"))
                 .map(Object::toString).toArray(String[]::new);
 
-        reflectiveClass.produce(new ReflectiveClassBuildItem(true, true, classes));
+        reflectiveClass.produce(ReflectiveClassBuildItem.builder(classes).constructors().methods().fields().build());
     }
 
     @BuildStep
